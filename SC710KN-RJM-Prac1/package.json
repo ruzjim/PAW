@@ -1,0 +1,13 @@
+{
+  "name": "sc710kn-rjm-prac1",
+  "version": "1.0.0",
+  "main": "Prac1.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node Prac1.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
