@@ -1,0 +1,49 @@
+﻿@model Practica.Models.FormModel
+@{
+    ViewData["Title"] = "Formulario de prueba";
+}
+<h1>@ViewData["Title"]</h1>
+
+@if (ViewBag.Mensaje != null)
+{
+    <div class="alert alert-warning">@ViewBag.Mensaje</div>
+}
+
+<div style="display: flex; justify-content: center; align-items: center; height: 70vh;">
+    <form asp-action="Form" method="post" style="min-width: 320px; padding: 2rem; border: 1px solid #ccc; border-radius: 8px; background: #fafafa;">
+        <div class="form-group mb-3">
+            <label for="Id">Id</label>
+            <input asp-for="Id" class="form-control" id="Id" />
+            <span asp-validation-for="Id" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="Nombre">Nombre</label>
+            <input asp-for="Nombre" class="form-control" id="Nombre" />
+            <span asp-validation-for="Nombre" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="Correo">Correo</label>
+            <input asp-for="Correo" class="form-control" id="Correo" />
+            <span asp-validation-for="Correo" class="text-danger"></span>
+        </div>
+        <div class="form-group mb-3">
+            <label for="Edad">Edad</label>
+            <input asp-for="Edad" class="form-control" id="Edad" />
+            <span asp-validation-for="Edad" class="text-danger"></span>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Enviar</button>
+    </form>
+</div>
+
+@if (ViewBag.form == true)
+{
+    <div class="mt-4 p-3 border rounded bg-light">
+        <h4>Datos enviados:</h4>
+        <ul>
+            <li><strong>Id:</strong> @Model.Id</li>
+            <li><strong>Nombre:</strong> @Model.Nombre</li>
+            <li><strong>Correo:</strong> @Model.Correo</li>
+            <li><strong>Edad:</strong> @Model.Edad</li>
+        </ul>
+    </div>
+}
