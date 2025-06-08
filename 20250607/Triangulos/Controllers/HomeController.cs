@@ -18,6 +18,18 @@ public class HomeController : Controller
         return View();
     }
 
+
+        [HttpPost]
+    public IActionResult Index(Triangulo triangulo)
+    {
+        if (!ModelState.IsValid)
+        {
+            return View(triangulo);
+        }
+        // Procesar el modelo válido...
+        return View(triangulo);
+    }
+
     public IActionResult Privacy()
     {
         return View();

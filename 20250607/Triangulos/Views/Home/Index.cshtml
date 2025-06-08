@@ -1,8 +1,71 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model Triangulos.Models.Triangulo
+@{
+    ViewData["Title"] = "Triangulos";
 }
 
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class=" row justify-content-center">
+        <div class="col-md-6 p-4">
+            <h1 class="display-4">Triangulos</h1>
+            <p class="lead">Aplicación para calcular informacion de un triángulo.</p>
+            <form method="post" asp-action="Index">
+                <h5>Ingrese las longitudes de los lados del triángulo:</h5>
+                <div class="mb-3">
+                    <div class="form-floating mb-3">
+                        <input asp-for="a" class="form-control" placeholder="Lado a" />
+                        <label asp-for="a"></label>
+                        <span asp-validation-for="a" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-floating mb-3">
+                        <input asp-for="b" class="form-control" placeholder="Lado b" />
+                        <label asp-for="b"></label>
+                        <span asp-validation-for="b" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="form-floating mb-3">
+                        <input asp-for="c" class="form-control" placeholder="Lado c" />
+                        <label asp-for="c"></label>
+                        <span asp-validation-for="c" class="text-danger"></span>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Calcular</button>
+            </form>
+        </div>
+
+        <div class="col-md-6 p-4">
+
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="display-6">Resultados</h2>
+                </div>
+                <div class="card-body">
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="text-danger">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                        </div>
+                    }
+                    else if (Model != null && Model.a.HasValue && Model.b.HasValue && Model.c.HasValue &&
+                    ViewData.ModelState.IsValid)
+                    {
+                        <p><strong>Perímetro:</strong> @Model.Perimetro?.ToString("0.00")</p>
+                        <p><strong>Semiperímetro:</strong> @Model.Semiperimetro?.ToString("0.00")</p>
+                        <p><strong>Área:</strong> @Model.Area?.ToString("0.00")</p>
+                        <p><strong>Tipo:</strong> @Model.Tipo</p>
+                    }
+                    else
+                    {
+                        <p id="resultado" class="card-text">Aquí aparecerá el resultado del cálculo.</p>
+                    }
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
 </div>
