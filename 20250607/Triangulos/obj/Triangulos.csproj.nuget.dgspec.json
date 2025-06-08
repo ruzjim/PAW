@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Administrador\\Desktop\\PAW\\20250607\\triangulos\\Triangulos.csproj": {}
+    "C:\\Users\\Administrador\\Desktop\\PAW\\20250607\\Triangulos\\Triangulos.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Administrador\\Desktop\\PAW\\20250607\\triangulos\\Triangulos.csproj": {
+    "C:\\Users\\Administrador\\Desktop\\PAW\\20250607\\Triangulos\\Triangulos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Administrador\\Desktop\\PAW\\20250607\\triangulos\\Triangulos.csproj",
+        "projectUniqueName": "C:\\Users\\Administrador\\Desktop\\PAW\\20250607\\Triangulos\\Triangulos.csproj",
         "projectName": "Triangulos",
-        "projectPath": "C:\\Users\\Administrador\\Desktop\\PAW\\20250607\\triangulos\\Triangulos.csproj",
+        "projectPath": "C:\\Users\\Administrador\\Desktop\\PAW\\20250607\\Triangulos\\Triangulos.csproj",
         "packagesPath": "C:\\Users\\Administrador\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Administrador\\Desktop\\PAW\\20250607\\triangulos\\obj\\",
+        "outputPath": "C:\\Users\\Administrador\\Desktop\\PAW\\20250607\\Triangulos\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Administrador\\AppData\\Roaming\\NuGet\\NuGet.Config"

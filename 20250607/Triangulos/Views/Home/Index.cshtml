@@ -9,7 +9,7 @@
             <h1 class="display-4">Triangulos</h1>
             <p class="lead">Aplicación para calcular informacion de un triángulo.</p>
             <form method="post" asp-action="Index">
-                <h5>Ingrese las longitudes de los lados del triángulo:</h5>
+                <h5>Ingrese las longitudes de los lados del triángulo: (unidades)</h5>
                 <div class="mb-3">
                     <div class="form-floating mb-3">
                         <input asp-for="a" class="form-control" placeholder="Lado a" />
@@ -51,10 +51,14 @@
                     else if (Model != null && Model.a.HasValue && Model.b.HasValue && Model.c.HasValue &&
                     ViewData.ModelState.IsValid)
                     {
-                        <p><strong>Perímetro:</strong> @Model.Perimetro?.ToString("0.00")</p>
-                        <p><strong>Semiperímetro:</strong> @Model.Semiperimetro?.ToString("0.00")</p>
-                        <p><strong>Área:</strong> @Model.Area?.ToString("0.00")</p>
+                        <p><strong>Perímetro:</strong> @Model.Perimetro?.ToString("0.00") u</p>
+                        <p><strong>Semiperímetro:</strong> @Model.Semiperimetro?.ToString("0.00") u</p>
+                        <p><strong>Área:</strong> @Model.Area?.ToString("0.00") u²</p>
                         <p><strong>Tipo:</strong> @Model.Tipo</p>
+                        <p><strong>Ángulo α:</strong> @Model.Anguloα?.ToString("0.00") °</p>
+                        <p><strong>Ángulo β:</strong> @Model.Anguloβ?.ToString("0.00") °</p>
+                        <p><strong>Ángulo γ:</strong> @Model.Anguloγ?.ToString("0.00") °</p>
+
                     }
                     else
                     {

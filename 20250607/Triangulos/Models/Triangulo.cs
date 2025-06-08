@@ -48,11 +48,6 @@ namespace Triangulos.Models
             }
         }
 
-
-
-
-
-
         public string Tipo
         {
             get
@@ -71,5 +66,43 @@ namespace Triangulos.Models
                 }
             }
         }
+
+
+        public double? Anguloα
+        {
+            get
+            {
+                if (a.HasValue && b.HasValue && c.HasValue)
+                {
+                    return Math.Acos((Math.Pow(b.Value, 2) + Math.Pow(c.Value, 2) - Math.Pow(a.Value, 2)) / (2 * b.Value * c.Value)) * (180 / Math.PI);
+                }
+                return null;
+            }
+        }
+
+        public double? Anguloβ
+        {
+            get
+            {
+                if (a.HasValue && b.HasValue && c.HasValue)
+                {
+                    return Math.Acos((Math.Pow(a.Value, 2) + Math.Pow(c.Value, 2) - Math.Pow(b.Value, 2)) / (2 * a.Value * c.Value)) * (180 / Math.PI);
+                }
+                return null;
+            }
+        }
+
+        public double? Anguloγ
+        {
+            get
+            {
+                if (a.HasValue && b.HasValue && c.HasValue)
+                {
+                    return Math.Acos((Math.Pow(a.Value, 2) + Math.Pow(b.Value, 2) - Math.Pow(c.Value, 2)) / (2 * a.Value * b.Value)) * (180 / Math.PI);
+                }
+                return null;
+            }
+        }
+
     }
 }
