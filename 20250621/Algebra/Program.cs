@@ -19,7 +19,7 @@ app.UseHttpsRedirection();
 app.MapGet("/", () => Results.Redirect("/swagger/index.html"));
 
 
-app.MapGet("/lineal", (
+app.MapGet("/lineal", static (
     double? b,
     double? m,
     double? x1,
@@ -44,11 +44,11 @@ app.MapGet("/lineal", (
 
     if (tieneM)
     {
-        pendiente = m.Value;
+        pendiente = m!.Value;
     }
     else
     {
-        pendiente = (y2.Value - y1.Value) / (x2.Value - x1.Value);
+        pendiente = (y2!.Value - y1!.Value) / (x2!.Value - x1!.Value);
     }
 
     // funcion: f(x) = mx + b
