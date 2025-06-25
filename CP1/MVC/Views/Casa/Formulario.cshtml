@@ -1,0 +1,46 @@
+@model MVC.Models.ClienteModel
+
+@{
+  ViewData["Title"] = "Formulario";
+}
+
+<div class="grid">
+  <article>
+    <header><b>Ingrese los datos del cliente</b></header>
+    <form method="post" asp-controller="Casa" asp-action="Formulario">
+      <fieldset>
+        <label>
+          <input asp-for="Cedula" placeholder="Cedula" />
+        </label>
+        <label>
+          <input asp-for="Edad" placeholder="Edad" />
+        </label>
+        <label>
+          <input asp-for="Nombre" placeholder="Nombre" />
+        </label>
+        <label>
+          <input asp-for="Correo" placeholder="Correo" />
+        </label>
+      </fieldset>
+      <input type="submit" value="Agregar" />
+    </form>
+  </article>
+  <article>
+    <header><b>Resultado</b></header>
+    @if (@Model != null)
+    {
+      @if (@Model.EsValido)
+      {
+        <mark>Los datos del formulario son válidos</mark>
+      }
+      else
+      {
+        <mark>El Formulario contiene errores</mark>
+        <br />
+        <p>
+          @Html.ValidationSummary(false, "Error(es):")
+        </p>
+      }
+    }
+  </article>
+</div>
