@@ -3,3 +3,13 @@ C:\Users\Administrador\Desktop\PAW\CP1\Console\obj\Debug\net8.0\Console.Assembly
 C:\Users\Administrador\Desktop\PAW\CP1\Console\obj\Debug\net8.0\Console.AssemblyInfo.cs
 C:\Users\Administrador\Desktop\PAW\CP1\Console\obj\Debug\net8.0\Console.csproj.CoreCompileInputs.cache
 C:\Users\Administrador\Desktop\PAW\CP1\Console\obj\Debug\net8.0\Console.sourcelink.json
+C:\Users\Administrador\Desktop\PAW\CP1\Console\bin\Debug\net8.0\Console.exe
+C:\Users\Administrador\Desktop\PAW\CP1\Console\bin\Debug\net8.0\Console.deps.json
+C:\Users\Administrador\Desktop\PAW\CP1\Console\bin\Debug\net8.0\Console.runtimeconfig.json
+C:\Users\Administrador\Desktop\PAW\CP1\Console\bin\Debug\net8.0\Console.dll
+C:\Users\Administrador\Desktop\PAW\CP1\Console\bin\Debug\net8.0\Console.pdb
+C:\Users\Administrador\Desktop\PAW\CP1\Console\obj\Debug\net8.0\Console.dll
+C:\Users\Administrador\Desktop\PAW\CP1\Console\obj\Debug\net8.0\refint\Console.dll
+C:\Users\Administrador\Desktop\PAW\CP1\Console\obj\Debug\net8.0\Console.pdb
+C:\Users\Administrador\Desktop\PAW\CP1\Console\obj\Debug\net8.0\Console.genruntimeconfig.cache
+C:\Users\Administrador\Desktop\PAW\CP1\Console\obj\Debug\net8.0\ref\Console.dll

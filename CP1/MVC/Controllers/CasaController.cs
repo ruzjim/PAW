@@ -24,8 +24,8 @@ public class CasaController : Controller
         cliente.EsValido = ModelState.IsValid;
         return View(cliente);
     }
-
-    [HttpGet]
+    // generado por ctrl+i copilot
+    [HttpGet("/casa/Cedula/{id}")]
     public IActionResult Identificacion(int id)
     {
         ViewBag.Id = id;

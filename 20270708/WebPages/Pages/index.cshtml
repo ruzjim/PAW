@@ -1,0 +1,16 @@
+@page
+
+@functions
+{
+  public string DayName { get; set; }
+
+  public void OnGet()
+  {
+    ViewData["Title"] = "Titulo de index ";
+    DayName = DateTime.Now.ToString("dddd");
+  }
+}
+
+
+
+    <p> Es @DayName</p>

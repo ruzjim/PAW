@@ -1,0 +1,3 @@
+# Ignorar todas las carpetas bin y obj en cualquier nivel
+**/bin/
+**/obj/

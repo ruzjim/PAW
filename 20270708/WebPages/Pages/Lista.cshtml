@@ -1,0 +1,32 @@
+﻿@page
+
+@model MyApp.Namespace.ListaModel
+
+
+@{
+    <h1>La Lista</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Elemento</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model.MiLista is not null )
+            {
+                foreach (var item in Model.MiLista)
+                {
+                    <tr>
+                        <td>@item</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td>No hay elementos en la lista.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
